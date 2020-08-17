@@ -1,0 +1,50 @@
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main h1 {
+  text-align: center;
+}
+
+main form {
+  margin: 0 0 2rem 0;
+}
+
+main form input {
+  padding-left: 1rem;
+  height: 3rem;
+  border-radius: .38rem;
+  border: none;
+  background-color: #cacadd;
+}
+
+main form button {
+  height: 3.1rem;
+  border-radius: .38rem;
+  cursor: pointer;
+  border: none;
+  background-color: #cacadd;
+  font-weight: bold;
+}
+
+main .result {
+  text-align: center;
+  background-color: #d0d0dd;
+  width: 10rem;
+  height: 7rem;
+}
+
+input:hover {
+  border-color: white;
+  background-color: #9d9dbd;
+}
+/*# sourceMappingURL=trial.css.map */
