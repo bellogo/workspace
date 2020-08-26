@@ -189,23 +189,120 @@
 
 // console.log(!isNaN("9.0"));
 
-let arrayString = "['car', 'yam', 3, 2, 5.2]"
-let splitString = arrayString.split(",");
-console.log(splitString);
+// let arrayString = "['car', 'yam', 3, 2, 5.2]"
+// let splitString = arrayString.split(",");
+// console.log(splitString);
 
-var letterNumber = /^[0-9a-zA-Z.]+$/;
-let temp = ''
-let array = [];
+// var letterNumber = /^[0-9a-zA-Z.]+$/;
+// let temp = ''
+// let array = [];
 
 
-for(let i = 0; i < splitString.length; i++){
-    for(let j = 0; j < splitString.length; j++){
-        if(splitString[i][j].match(letterNumber)){
-            temp = temp + splitString[i][j]
+// for(let i = 0; i < splitString.length; i++){
+//     for(let j = 0; j < splitString.length; j++){
+//         if(splitString[i][j].match(letterNumber)){
+//             temp = temp + splitString[i][j]
+//         }
+//     }
+//     array.push(temp);
+//     temp = '';
+// }
+
+// console.log(array);
+
+// const string = 'rececar';
+// if (string.length % 2 === 0) {
+//     return false
+// }
+
+
+// const reverseString = (string) => {
+//     //change input string to lower case
+//     let lowerCaseString = string.toLowerCase();
+//     let newString = '';
+//     var number = /^[0-9]+$/;
+//     var space = /^[ ]+$/;
+
+//     //loop string in reverse And concatenate each letter to  new  string 
+//     for (let i = lowerCaseString.length - 1; i > -1; i--) {
+//         // test for space in input
+//         if (lowerCaseString[i].match(space)) {
+//             return 'Error: There are no spaces in a word';
+//         }
+//         // test for number in input
+//         if (lowerCaseString[i].match(number)) {
+//             return 'Error: A number doesnt makeup a word';
+//         }
+//         newString += lowerCaseString[i];
+//     }
+//     // test for empty input
+//     if (string === '') {
+//         return 'Error: Please input a word';
+//     }
+//     // test for single input
+//     if (string.length === 1) {
+//         return 'A letter is not a word';
+//     }
+//     // check if reversed string And input string spell the  same word
+//     if (newString === lowerCaseString) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// };
+// console.log(reverseString(' '));
+
+// const reverseStrings = (string) => {
+//     // test for empty input
+//     if (string === '') {
+//         return 'Error: Please input a string';
+//     }
+
+//     return string.split('').reverse().join('');
+// };
+// console.log(reverseStrings('hello world'));
+
+// let s = "['betty', 'sharon', 'victory']";
+
+
+const numberString = str => {
+    // Resolved stringed array to normal array
+    let splited = str.split(',');
+    let letter = /^[a-zA-Z]+$/;
+    let temp = '';
+    let strArray = [];
+    for (let i = 0; i < splited.length; i++) {
+        for (let j = 0; j < splited[i].length; j++) {
+            if (splited[i][j].match(letter)) {
+                temp += splited[i][j];
+            }
         }
+        strArray.push(temp)
+        temp = '';
     }
-    array.push(temp);
-    temp = '';
-}
 
-console.log(array);
+    // 
+    return strArray.map((value) => {
+        return value[0].toUpperCase() + value.slice(1);
+    })
+
+};
+
+console.log(numberString("['betty', 'sharon', 'victory']"));
+
+
+
+
+// document.querySelector('#form').addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     const forminput = document.querySelector('#input').value;
+//     document.querySelector('#result').innerHTML = numberString(forminput);
+// })
+
+// console.log(numberString("[0,1,2,3,4,5,6,7,8,9]"));
+
+
+// const stringNumber = (s) => {
+//     return '(' + s[0] + s[1] + s[2] + ')' + ' ' + s[3] + s[4] + s[5] + ' ' + s[6] + s[7] + s[8] + s[9];
+// }
+// console.log(stringNumber('0123456789'));
